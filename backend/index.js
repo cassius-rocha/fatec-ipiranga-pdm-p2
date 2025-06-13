@@ -27,7 +27,6 @@ app.get('/previsao', async (req, res) => {
     const minute = date.getMinutes().toString().padStart(2, '0')
 
     return {
-      date: item.dt,
       formattedDate: `${weekDay}, ${hour}:${minute}`,
       temp_min: item.main.temp_min,
       temp_max: item.main.temp_max,
