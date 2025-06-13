@@ -29,33 +29,15 @@ function SearchWeather() {
     }, [city])
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center', 
-                justifyContent: 'center',
-                padding: '2rem',
-                minHeight: '100vh',
-            }}
-        >
-            <h2 style={{ marginBottom: '0.5rem' }}>Buscar Previsão do Tempo</h2>
+        <div className="flex flex-column align-items-center justify-content-center p-4 min-h-screen">
+            <h2 className="mb-2">Buscar Previsão do Tempo</h2>
 
             <input
                 type="text"
                 value={city}
                 onChange={e => setCity(e.target.value)}
                 placeholder="Digite o nome da cidade"
-                style={{
-                    textAlign: 'center',
-                    padding: '0.5rem',
-                    fontSize: '1rem',
-                    width: '100%',
-                    maxWidth: '400px',
-                    borderRadius: '8px',
-                    border: '1px solid #ccc',
-                    marginBottom: '1rem'
-                }}
+                className="text-center p-2 text-base w-full max-w-20rem border-round-lg border-none mb-3"
             />
 
             <ForecastDisplay forecast={forecast} />
