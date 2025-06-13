@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import ForecastDisplay from '../ForecastDisplay/ForecastDisplay'
 
 function SearchWeather() {
     const [city, setCity] = useState('São Paulo')
