@@ -1,5 +1,5 @@
 const cors = require('cors')
-const diasSemana = require('./utils/daysOfWeek');
+const daysOfWeek = require('./utils/daysOfWeek');
 const express = require('express')
 const app = express()
 const weatherClient = require('./utils/weatherClient')
@@ -22,7 +22,7 @@ app.get('/previsao', async (req, res) => {
 
   const forecasts = result.data.list.map(item => {
     const date = new Date(item.dt * 1000)
-    const weekDay = diasSemana[date.getDay()]
+    const weekDay = daysOfWeek[date.getDay()]
     const hour = date.getHours().toString().padStart(2, '0')
     const minute = date.getMinutes().toString().padStart(2, '0')
 
